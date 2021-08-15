@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./XO.css">
+    <link rel="icon" href="/images/X.png" type="image/x-icon">
+    <script src="XO.js"></script>
+    <style>
+        body {
+            background-color: black;
+            color: blanchedalmond;
+        }
+    </style>
+    <title>Tic Tac Toe</title>
+</head>
+<body class="dark">
+
+    <span class="navbtn" id="mainNav" onclick="Nav()" >&#9881;</span>
+    
+    <div class="settings" id="settings">
+        <span class="navbtn" onclick="Nav()">close</span><br><br>
+
+        <div class="player">
+            player 1:
+            <div id="symbol1">
+                symbol: <br>
+                <select id="selectS1" onchange="updateS1()">
+                    <option value="0">X</option>
+                    <option value="1">O</option>
+                    <option value="2">sasuke</option>
+                    <option value="3">itachi</option>
+                    <option value="4">madara</option>
+                </select>
+                
+            </div><br>
+            <div id="type1">
+                type: <br>
+                <select id="selectT1" onchange="updateT1()">
+                    <option value="human">human</option>
+                    <option value="noobBot">noob bot</option>
+                    <option value="godBot">god bot</option>
+                </select>
+            </div><br>
+        </div>
+
+        <div class="player">
+            player 2:
+            <div id="symbol2">
+                symbol: <br>
+                <select id="selectS2" onchange="updateS2()">
+                    <option value="0">X</option>
+                    <option value="1">O</option>
+                    <option value="2">sasuke</option>
+                    <option value="3">itachi</option>
+                    <option value="4">madara</option>
+                </select>
+                
+            </div><br>
+            <div id="type2">
+                type: <br>
+                <select id="selectT2" onchange="updateT2()">
+                    <option value="human">human</option>
+                    <option value="noobBot">noob bot</option>
+                    <option value="godBot">god bot</option>
+                </select>
+            </div><br>
+        </div>
+        
+    </div>
+    <br><br><br>
+
+    <div id="heading" onclick="start()">
+        START
+    </div>
+    <div id="navigation">
+
+    </div>
+    <div id="settings">
+
+    </div>
+    <div id="grid">
+        
+    </div>
+    <div id="footing">
+
+    </div>
+    <button onclick="destroy()">CLEAR</button>
+</body>
+</html>

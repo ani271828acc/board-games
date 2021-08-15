@@ -1,0 +1,35 @@
+body {
+    background-color: rgb(66, 66, 66);
+    color: white;
+}
+#board {
+    width: 750px;
+    height: 750px;
+    border: 2px solid white;
+}
+#board {
+    margin-left: auto;
+    margin-right: auto;
+}
+#board > tr > td {
+    width: 80px;
+    height: 80px;
+    border: 1px solid rgb(255, 255, 255);
+    font-size: 40px;
+    text-align: center;
+}
+#score {
+    width: 200px;
+    height: 50px;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 8px 8px 8px 8px;
+    border: 1px solid white;
+    font-size: 40px;
+    text-align: center;
+}
+
+.cellBg {
+    background-color: blue;
+}

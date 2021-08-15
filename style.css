@@ -1,0 +1,29 @@
+body {
+    background-color: rgb(14, 14, 34);
+    color: white;
+}
+
+.title, .contents{
+    font-size: 40px;
+    text-align: center;
+    border: 3px solid white;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0px 20px 0px 20px;
+    width: fit-content;  
+    padding: 20px 20px 20px 20px;
+    text-decoration: none;
+}
+
+.contents {
+    width: fit-content;
+    background-color: black;
+    color: blanchedalmond;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.contents:hover {
+    background-color: violet;
+    color: black;   
+}
