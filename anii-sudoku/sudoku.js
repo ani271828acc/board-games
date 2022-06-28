@@ -1,63 +1,65 @@
 
 // DATABASE OF PUZZLES (randomly select from these and then shuffle it keepimg the uniqueness intact)
-let easy = [
-    "....98.1.2..5..3...4....9..1...52...7.84.....329.1.......7....59...31.2.....4....",
-    "..814.....2............7.15..5......7..3.2...93.851.....74...9.21.5.8....8..13..4",
-    "..........8..........5.9.6819...4.86.6..1.5..2.4....39.......24..3481.5.6....3...",
-    "...65...8.......57..21..4.......4.8....72........31..5.2.3...4..17.6..3.4.62..1..",
-    ".3.....21.5..7.6.372..6.......72....3......8.............5....2..461.3.5..54.3.17",
-  ];
+// let easy = [
+//     "....98.1.2..5..3...4....9..1...52...7.84.....329.1.......7....59...31.2.....4....",
+//     "..814.....2............7.15..5......7..3.2...93.851.....74...9.21.5.8....8..13..4",
+//     "..........8..........5.9.6819...4.86.6..1.5..2.4....39.......24..3481.5.6....3...",
+//     "...65...8.......57..21..4.......4.8....72........31..5.2.3...4..17.6..3.4.62..1..",
+//     ".3.....21.5..7.6.372..6.......72....3......8.............5....2..461.3.5..54.3.17",
+//   ];
 
-  let easySol = [
-    "576398412291574368843126957164952873758463291329817546412789635985631724637245189",
-    "578149632123685947496237815865974321741362589932851476357426198214598763689713254",
-    "439678215586142973712539468195324786368917542274865139851796324923481657647253891",
-    "374652918681943257592178463263594781158726394749831625925317846817469532436285179",
-    "436859721958271643721364958589726134317945286642138579193587462874612395265493817",
-  ];
+//   let easySol = [
+//     "576398412291574368843126957164952873758463291329817546412789635985631724637245189",
+//     "578149632123685947496237815865974321741362589932851476357426198214598763689713254",
+//     "439678215586142973712539468195324786368917542274865139851796324923481657647253891",
+//     "374652918681943257592178463263594781158726394749831625925317846817469532436285179",
+//     "436859721958271643721364958589726134317945286642138579193587462874612395265493817",
+//   ];
 
-  let mid = [
-    ".5.8..7............7..2.98474.1..5.8....7..6.1......2....689.....4..125.9...4....",
-    ".6..59.3.....4...15....1.....1..4..3..8.1...5....3..9.....8.42.64...2.1.......6..",
-    ".......3.576..28.....58.......8....7.549..3..8..7.3.69..7......3.8..762.4..6.....",
-    "45.17..2.8.....176............8....7........5...2.4...1.37.8..26..32...1..4..6.3.",
-    "..7.92...4..3.8..631....9....62...8......1.........7..8.....3..12.8.....9.46..1..",
-  ];
+//   let mid = [
+//     ".5.8..7............7..2.98474.1..5.8....7..6.1......2....689.....4..125.9...4....",
+//     ".6..59.3.....4...15....1.....1..4..3..8.1...5....3..9.....8.42.64...2.1.......6..",
+//     ".......3.576..28.....58.......8....7.549..3..8..7.3.69..7......3.8..762.4..6.....",
+//     "45.17..2.8.....176............8....7........5...2.4...1.37.8..26..32...1..4..6.3.",
+//     "..7.92...4..3.8..631....9....62...8......1.........7..8.....3..12.8.....9.46..1..",
+//   ];
 
-  let midSol = [
-    "459816732238497615671325984742163598395278461186954327527689143864731259913542876",
-    "164759832293648571587321946951264783438917265726835194375186429649572318812493657",
-    "281479536576312894943586271639824157754961382812753469167235948398147625425698713",
-    "456173928832495176917682354529831647348967215761254893193748562675329481284516739",
-    "657192834492378516318564927736259481549781263281436795865917342123845679974623158",
-  ];
+//   let midSol = [
+//     "459816732238497615671325984742163598395278461186954327527689143864731259913542876",
+//     "164759832293648571587321946951264783438917265726835194375186429649572318812493657",
+//     "281479536576312894943586271639824157754961382812753469167235948398147625425698713",
+//     "456173928832495176917682354529831647348967215761254893193748562675329481284516739",
+//     "657192834492378516318564927736259481549781263281436795865917342123845679974623158",
+//   ];
 
-  let hard = [
-    "......26.........5745.6.....3....5.46.......7....9...15.197...24...261...7.1.3...",
-    ".6.54...3.9.2.15...3........1....2....3...8.9....9...4....1..86..56..9.......8.2.",
-    ".8.2.....5........369.57...2..5...7....3..8.6...1....5.2..983..1...3...7..5.1....",
-    "..42.98.7..8..3..91......3.....729....7..8..1..........4.9.......53.4.1837....5..",
-    "18.4.6.2....3..5..4....76..8......5....8.....2.6.7.84........1...4..3....7.128...",
-  ];
+//   let hard = [
+//     "......26.........5745.6.....3....5.46.......7....9...15.197...24...261...7.1.3...",
+//     ".6.54...3.9.2.15...3........1....2....3...8.9....9...4....1..86..56..9.......8.2.",
+//     ".8.2.....5........369.57...2..5...7....3..8.6...1....5.2..983..1...3...7..5.1....",
+//     "..42.98.7..8..3..91......3.....729....7..8..1..........4.9.......53.4.1837....5..",
+//     "18.4.6.2....3..5..4....76..8......5....8.....2.6.7.84........1...4..3....7.128...",
+//   ];
 
-  let hardSol = [
-    "318754269926831745745269813137682594689415327254397681561978432493526178872143956",
-    "268547193794231568531869742619483257423756819857192634972315486385624971146978325",
-    "784261539512943768369857412296584173451379826873126945627498351148635297935712684",
-    "634219857758643129129785436516472983297538641483196275841957362965324718372861594",
-    "183456927967312584452987631841239756735864192296571843628745319514693278379128465"
-  ];
+//   let hardSol = [
+//     "318754269926831745745269813137682594689415327254397681561978432493526178872143956",
+//     "268547193794231568531869742619483257423756819857192634972315486385624971146978325",
+//     "784261539512943768369857412296584173451379826873126945627498351148635297935712684",
+//     "634219857758643129129785436516472983297538641483196275841957362965324718372861594",
+//     "183456927967312584452987631841239756735864192296571843628745319514693278379128465"
+//   ];
 
 
 // SHUFFLE
 // take a boardString and shuffle it without affecting it's validity
 
+import { generate } from "./sudoku2.js";
+
 function shuffle(string, solution) {
     let s = [string, solution];
-    console.log(typeof(s[0]));
+    // console.log(typeof(s[0]));
     let str1 = ""; let str2 = "";
     let ans = [str1,str2];
-    console.log(typeof(ans[0]));
+    // console.log(typeof(ans[0]));
     let rowShuffles = Math.floor(Math.random()*10) + 1;
     let colShuffles = Math.floor(Math.random()*10) + 1;
     let rotations = Math.floor(Math.random()*8) + 1;
@@ -88,7 +90,7 @@ function shuffle(string, solution) {
             ans[1] = "" +  ans[1].slice(0,27) + ans[1].slice(54,81) + ans[1].slice(27,54);
         }  
     } 
-    console.log(ans);
+    // console.log(ans);
     return ans;
 }
 
@@ -152,16 +154,16 @@ function startGame() {
     updateLevel();
     updateLives();
     currentTime = time;
-    currentlives = lives;
+    currentLives = lives;
     disable=false;
     spaceCount = 0;
-    console.log(puzzle);
+    // console.log(puzzle);
     for(let i=0;i<81;i++) {
         if(puzzle[i]!='.'){
             id(i).innerText = puzzle[i];
         }
         else {
-            console.log("***" + i + "***");
+            // console.log("***" + i + "***");
             spaceCount++;
             id(i).addEventListener("click", function () {
                 if(!disable) {
@@ -203,8 +205,8 @@ function id(id) {
 
 function updateMove() {
     if(selectedCell!=null&&selectedNum) {
-        console.log(selectedNum);
-        console.log(selectedCell);
+        // console.log(selectedNum);
+        // console.log(selectedCell);
         id(selectedCell).textContent = selectedNum;
         if(selectedNum==solution[selectedCell]) {
            spaceCount--;
@@ -236,16 +238,16 @@ function updateMove() {
                 id(selectedCell).textContent="";
                 selectedNum = null;
                 selectedCell = null;
-                currentlives--;
-                id("lives").innerText="lives: " + currentlives;
-                if(currentlives==0){ console.log("end"); endGame();}
+                currentLives--;
+                id("lives").innerText="lives: " + currentLives;
+                if(currentLives==0){ endGame();}
                 else disable = false;
                },1000);
 
         }
 
     }    
-    resolve();
+    // resolve();
 }
 
 function endGame() {
@@ -319,24 +321,28 @@ function destroy() {
     let lev = id("selectLevel").value;
     if(lev=="easy") {
         let n =Math.floor(Math.random()*5);
-        let curSt = shuffle(easy[n],easySol[n]);
+        // let curSt = shuffle(easy[n],easySol[n]);
+        let curSt = generate(0);
+        console.log(curSt);
         puzzle = curSt[0];
         solution = curSt[1];
     }
     else if(lev=="mid") {
         let n =Math.floor(Math.random()*5);
-        let curSt = shuffle(mid[n],midSol[n]);
+        // let curSt = shuffle(mid[n],midSol[n]);
+        let curSt = generate(2);
         puzzle = curSt[0];
         solution = curSt[1];
     }
     else {
         let n =Math.floor(Math.random()*5);
-        let curSt = shuffle(hard[n],hardSol[n]);
+        // let curSt = shuffle(hard[n],hardSol[n]);
+        let curSt = generate(4);
         puzzle = curSt[0];
         solution = curSt[1];
     }
-    console.log(puzzle);
-    console.log(solution);
+    // console.log(puzzle);
+    // console.log(solution);
 }
 
 
@@ -350,7 +356,7 @@ function updateTime() {
     }
     id("selectTime").value=time;
     id("timer").innerText=parseInt(time/60)+'m'+" "+time%60+'s';
-    console.log(parseInt(time/60)+'m'+" "+time%60+'s');
+    // console.log(parseInt(time/60)+'m'+" "+time%60+'s');
 }
 function updateLives() {
     if(id("selectLives").value) {
@@ -362,7 +368,7 @@ function updateLives() {
     }
     id("selectLives").value=lives;
     id("lives").innerText="lives left:  " + lives;
-    console.log(lives); 
+    // console.log(lives); 
 }
 
 
@@ -383,7 +389,7 @@ function updateLives() {
     } 
  }
 
- function cellEvent(i) {
+function cellEvent(i) {
     if(!disable) {
         if(id(i).classList.contains("selected")) {
             id(i).classList.remove("selected");
@@ -400,64 +406,27 @@ function updateLives() {
     }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
  function Nav() {
     if(!check) {
-        console.log(check);
+        // console.log(check);
         check=1;
         document.getElementById("settings").style.width="250px";
     } 
 
     else {
-        console.log(check);
+        // console.log(check);
         check=0;
         document.getElementById("settings").style.width="0px";
     }
 }
+
+let navBtns = document.querySelectorAll(".navbtn");
+for(let i=0;i<navBtns.length;i++) {
+    navBtns[i].addEventListener('click', Nav);
+}
+document.querySelector("#selectTime").addEventListener('change',updateTime);
+document.querySelector("#selectLevel").addEventListener('change',updateLevel);
+document.querySelector("#selectLives").addEventListener('change',updateLives);
+document.querySelector("#startBtn").addEventListener('click',startGame);
+document.querySelector("#gibSol").addEventListener('click',autofill);
+document.querySelector("#kill").addEventListener('change',destroy);

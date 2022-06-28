@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./sudoku.css">
     <link rel="icon" href="./sudoku.webp" type="image/x-icon">
-    <script src="./sudoku.js"></script>
     <title>Sudoku</title>
     <style>
         body {
@@ -16,14 +15,79 @@
     </style>
 </head>
 <body>
-    <span class="navbtn" id="mainNav" onclick="Nav()" >&#9881;</span>
-
-
-
-
+    <span class="navbtn" id="mainNav" >&#9881;</span>
 
     <div class="settings" id="settings">
-        <span class="navbtn" onclick="Nav()">close</span><br><br>
+        <span class="navbtn">close</span><br><br>
+        <div>
+            time: <br>
+            <input id="selectTime" type="number" step="1"">
+        </div><br>
+        <div>
+            level: <br>
+            <select id="selectLevel">
+                <option value="easy">easy</option>
+                <option value="mid">mid</option>
+                <option value="hard">hard</option>
+              </select>
+        </div><br>
+        <div>
+            lives: <br>
+            <input id="selectLives" type="number" placeholder="5">          
+        </div><br>
+        <!-- 
+        <div>
+            mode: <br>
+            <select id="selectMode" onchange="updateMode()">
+                <option value="number">number</option>
+                <option value="color">color</option>
+              </select>
+        </div><br>
+        -->
+    </div>
+    <br><br><br>
+
+
+    <div id="game">
+        <div id="board"></div>
+        <div id="keypad"></div><br>
+    </div>
+    <div class="status">
+        <div id="timer"></div>
+        <div id="lives"></div>
+        <div id="startBtn">START</div>
+        <div id="gibSol">solution</div>
+        <div id="kill">clear</div>
+    </div>
+    <script type="module" src="./sudoku.js"></script>
+    <script type="module" src="./sudoku2.js"></script>
+    <script src="./utility.js"></script>
+</body>
+</html>
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./sudoku.css">
+    <link rel="icon" href="./sudoku.webp" type="image/x-icon">
+    <title>Sudoku</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <span class="navbtn" id="mainNav" >&#9881;</span>
+
+    <div class="settings" id="settings">
+        <span class="navbtn">close</span><br><br>
         <div>
             time: <br>
             <input id="selectTime" type="number" step="1" onchange="updateTime()">
@@ -40,21 +104,9 @@
             lives: <br>
             <input id="selectLives" type="number" placeholder="5" onchange="updateLives()">          
         </div><br>
-        <!-- 
-        <div>
-            mode: <br>
-            <select id="selectMode" onchange="updateMode()">
-                <option value="number">number</option>
-                <option value="color">color</option>
-              </select>
-        </div><br>
-        -->
+       
     </div>
     <br><br><br>
-
-
-
-
 
 
     <div id="game">
@@ -65,8 +117,11 @@
         <div id="timer"></div>
         <div id="lives"></div>
         <div id="startBtn" onclick="startGame()">START</div>
-        <div onclick="autofill()">solution</div>
-        <div onclick="destroy()">clear</div>
+        <div id="gibSol" onclick="autofill()">solution</div>
+        <div id="kill" onclick="destroy()">clear</div>
     </div>
+    <script type="module" src="./sudoku.js"></script>
+    <script type="module" src="./sudoku2.js"></script>
+    <script src="./utility.js"></script>
 </body>
-</html>
+</html> -->
