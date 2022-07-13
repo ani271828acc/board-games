@@ -54,45 +54,45 @@
 
 import { generate } from "./sudoku2.js";
 
-function shuffle(string, solution) {
-    let s = [string, solution];
-    // console.log(typeof(s[0]));
-    let str1 = ""; let str2 = "";
-    let ans = [str1,str2];
-    // console.log(typeof(ans[0]));
-    let rowShuffles = Math.floor(Math.random()*10) + 1;
-    let colShuffles = Math.floor(Math.random()*10) + 1;
-    let rotations = Math.floor(Math.random()*8) + 1;
+// function shuffle(string, solution) {
+//     let s = [string, solution];
+//     // console.log(typeof(s[0]));
+//     let str1 = ""; let str2 = "";
+//     let ans = [str1,str2];
+//     // console.log(typeof(ans[0]));
+//     let rowShuffles = Math.floor(Math.random()*10) + 1;
+//     let colShuffles = Math.floor(Math.random()*10) + 1;
+//     let rotations = Math.floor(Math.random()*8) + 1;
 
-    // rotate numbers 1 to 9
-    for(let i=0;i<2;i++) {
-        for(let j=0;j<81;j++) {
-           if(s[i][j]!='.') {
-               if(parseInt(s[i][j])+rotations > 9) {
-                let k = parseInt(s[i][j])+rotations-9;
-                ans[i]=ans[i]+''+k;
-               } else {
-                let k = parseInt(s[i][j])+rotations;
-                ans[i]=ans[i]+''+k;
-               }
-           } else {
-               ans[i]=ans[i]+".";
-           }
-        }
-    }  
+//     // rotate numbers 1 to 9
+//     for(let i=0;i<2;i++) {
+//         for(let j=0;j<81;j++) {
+//            if(s[i][j]!='.') {
+//                if(parseInt(s[i][j])+rotations > 9) {
+//                 let k = parseInt(s[i][j])+rotations-9;
+//                 ans[i]=ans[i]+''+k;
+//                } else {
+//                 let k = parseInt(s[i][j])+rotations;
+//                 ans[i]=ans[i]+''+k;
+//                }
+//            } else {
+//                ans[i]=ans[i]+".";
+//            }
+//         }
+//     }  
 
-    // shuffle rows clockwise and randomly break it
-    for(let i=0;i<rowShuffles;i++) {
-        ans[0] = "" + ans[0].slice(54,81) + ans[0].slice(0,27) + ans[0].slice(27,54);
-        ans[1] = "" + ans[1].slice(54,81) + ans[1].slice(0,27) + ans[1].slice(27,54);
-        if(Math.floor(Math.random()*2)==1) {
-            ans[0] = "" +  ans[0].slice(0,27) + ans[0].slice(54,81) + ans[0].slice(27,54);
-            ans[1] = "" +  ans[1].slice(0,27) + ans[1].slice(54,81) + ans[1].slice(27,54);
-        }  
-    } 
-    // console.log(ans);
-    return ans;
-}
+//     // shuffle rows clockwise and randomly break it
+//     for(let i=0;i<rowShuffles;i++) {
+//         ans[0] = "" + ans[0].slice(54,81) + ans[0].slice(0,27) + ans[0].slice(27,54);
+//         ans[1] = "" + ans[1].slice(54,81) + ans[1].slice(0,27) + ans[1].slice(27,54);
+//         if(Math.floor(Math.random()*2)==1) {
+//             ans[0] = "" +  ans[0].slice(0,27) + ans[0].slice(54,81) + ans[0].slice(27,54);
+//             ans[1] = "" +  ans[1].slice(0,27) + ans[1].slice(54,81) + ans[1].slice(27,54);
+//         }  
+//     } 
+//     // console.log(ans);
+//     return ans;
+// }
 
 /*************************************************************************************************************************** */
 let check = 0;

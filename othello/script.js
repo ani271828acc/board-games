@@ -29,14 +29,6 @@ function start() {
     let score_b = 2
     updateScores(score_a, score_b)
     let turn = 'a'
-    // for(let i = 0; i < 8; i++) {
-    //     for(let j = 0; j < 8; j++) {
-    //         let cell = id(i + '' + j)
-    //         if(check(cell.id, turn).length) {
-    //             cell.style.backgroundColor = "yellow"
-    //         }
-    //     }
-    // }
     for(let i = 0; i < 8; i++) {
         for(let j = 0; j < 8; j++) {
             let cell = id(i + '' + j)
