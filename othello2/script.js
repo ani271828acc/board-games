@@ -27,7 +27,7 @@ function start(board) {
 
                 disabled=isBot;
                 let bb=copyBoard(board);
-                let bM=minMax(bb,turn,6);
+                let bM=minMax(bb,turn,4);
                 console.log("best move is: ", bM);
                 if(turn == botTurn && bM[1]!=-1)
                     id(bM[1],bM[2],n).classList.add("bestMove");
@@ -88,7 +88,7 @@ function makeMove(board, move, turn) {
     // returns a list of squares that would be changed to turn
     // by this move excluding clicked sqaure
     // console.log(move);
-    console.assert(board[move[0]][move[1]]==0, "uwuw whyy");
+    console.assert(board[move[0]][move[1]]==0, "whywhywgywywhyy");
     let n=board.length, r=move[0], c=move[1];
     let res=[];
     for(let d=0;d<8;d++) {
